@@ -113,8 +113,13 @@ h6 {
 .nav_link:hover {
   color: #fce38a;
 }
-.nav_link:hover::after {
+.nav_link:hover::after, .nav_link.active:after {
+  
   opacity: 1;
+}
+.nav_link.active {
+  color: #fce38a;
+
 }
 /*button*/
 .btn {
@@ -135,9 +140,16 @@ h6 {
 }
 /*Slider*/
 .slider {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  
+}
+.slider_inner {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
 }
 .slider_item {
   position: relative;
